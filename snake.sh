@@ -136,12 +136,7 @@ function game() {
 			for ((i = 0; i < 22; i++)); do
 				for ((j = 0; j < 22; j++)); do
 					index=$((i * 22 + j))
-					val=${GRID[$index]}
-					if [[ $val != ' ' ]]; then
-						GRID_BUF+=${GRID[$index]}
-					else
-						GRID_BUF+=" "
-					fi
+					GRID_BUF+=${GRID[$index]}
 				done
 				GRID_BUF+="\n"
 			done
